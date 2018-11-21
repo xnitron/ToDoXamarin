@@ -74,6 +74,7 @@ namespace ToDo.ViewModel
                 Tasks.Remove(task);
             }
         }
+
         private async void ChangeTask(object taskObj)
         {
             var action = await page.DisplayActionSheet("Options", null, "Close", "Remove", "Change time");

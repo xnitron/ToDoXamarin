@@ -42,7 +42,7 @@ namespace ToDo.ViewModel
         }
 
         private TimeSpan timeSpan;
-        public TimeSpan TimeSpan
+        public TimeSpan TaskTimePicker
         {
             get { return timeSpan; }
             set
