@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDo.Views.AddTaskView"
+             Title="Add Task">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition Height=".4*"/>
+                <RowDefinition Height=".3*"/>
+                <RowDefinition Height=".2*"/>
+            </Grid.RowDefinitions>
+                <Label Text="Add Task!"
+                       FontSize="Large"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       Grid.Row="0"/>
+            <Editor Text="{Binding TaskName}" 
+                    Grid.Row="1"/>
+            <TimePicker Time="{Binding TaskTimePicker}"
+                        Grid.Row="2"/>
+            <Button Text="ADD TASK"
+                    Command="{Binding ListViewModel.SaveCommand}" 
+                    CommandParameter="{Binding}"
+                    Grid.Row="3"/>
+        </Grid>
+</ContentPage>
